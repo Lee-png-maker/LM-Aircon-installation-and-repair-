@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
@@ -7,18 +6,33 @@
 
 <title>Lee Aircon Installation & Repair | Gauteng</title>
 
-<meta name="description" content="Lee Aircon Installation & Repair provides professional air conditioner installation, repair, servicing, maintenance and fault diagnosis for homes, offices and businesses across Gauteng. Call 068 868 5355.">
-<meta name="keywords" content="aircon installation Gauteng, air conditioner repair Gauteng, aircon servicing Pretoria, aircon installation Johannesburg, aircon repair Midrand, aircon maintenance Centurion, split aircon installation, aircon technician Gauteng">
+<meta name="description" content="Lee Aircon Installation & Repair provides professional aircon installation, repair, servicing, cleaning, maintenance and fault diagnosis for homes, offices and businesses across Gauteng. Call 068 868 5355.">
+
+<meta name="keywords" content="aircon installation Gauteng, aircon repair Gauteng, aircon servicing Pretoria, aircon installation Johannesburg, aircon repair Centurion, aircon repair Midrand, aircon maintenance Gauteng, split aircon installation">
+
 <meta name="author" content="Lee Aircon Installation & Repair">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0879d1">
 
 <meta property="og:title" content="Lee Aircon Installation & Repair | Gauteng">
 <meta property="og:description" content="Professional aircon installation, repair, servicing and maintenance across Gauteng. Call 068 868 5355.">
 <meta property="og:type" content="website">
 
-<meta name="theme-color" content="#0879d1">
-
 <style>
+
+:root{
+    --blue:#0879d1;
+    --dark-blue:#075b9d;
+    --deep-blue:#043e69;
+    --sky:#eaf7ff;
+    --light:#f5fbff;
+    --white:#ffffff;
+    --text:#172532;
+    --muted:#61717d;
+    --green:#13b95c;
+    --border:#d9eaf4;
+}
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -31,8 +45,8 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f4f9fc;
-    color:#17212b;
+    background:var(--light);
+    color:var(--text);
     line-height:1.6;
 }
 
@@ -41,18 +55,53 @@ a{
     color:inherit;
 }
 
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--deep-blue);
+    color:#fff;
+    padding:9px 0;
+    font-size:14px;
+}
+
+.topbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.topbar a{
+    font-weight:bold;
+}
+
+.topbar a:hover{
+    color:#65d5ff;
+}
+
+/* HEADER */
+
 header{
-    background:#ffffff;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 15px rgba(0,0,0,.10);
+    background:#fff;
+    box-shadow:0 3px 20px rgba(0,0,0,.10);
 }
 
 .navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:14px 20px;
+    min-height:78px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -61,111 +110,138 @@ header{
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:11px;
 }
 
 .logo-icon{
-    width:48px;
-    height:48px;
-    border-radius:12px;
-    background:#0879d1;
-    color:#fff;
+    width:52px;
+    height:52px;
+    background:linear-gradient(135deg,var(--blue),var(--deep-blue));
+    border-radius:13px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:25px;
-    font-weight:bold;
+    color:#fff;
+    font-size:27px;
+    box-shadow:0 5px 15px rgba(8,121,209,.25);
 }
 
 .logo-text{
-    font-weight:800;
     font-size:18px;
-    color:#075b9d;
+    font-weight:900;
+    color:var(--dark-blue);
 }
 
 .logo-text span{
     display:block;
-    color:#333;
-    font-size:12px;
-    font-weight:500;
+    color:#60717d;
+    font-size:11px;
+    font-weight:600;
+    margin-top:2px;
 }
 
 nav{
     display:flex;
-    gap:20px;
     align-items:center;
+    gap:22px;
 }
 
 nav a{
-    font-weight:700;
-    color:#263746;
     font-size:14px;
+    font-weight:700;
+    color:#253746;
 }
 
 nav a:hover{
-    color:#0879d1;
+    color:var(--blue);
 }
 
-.menu-btn{
+.nav-call{
+    background:var(--blue);
+    color:#fff !important;
+    padding:12px 17px;
+    border-radius:7px;
+}
+
+.menu{
     display:none;
-    background:none;
-    border:0;
     font-size:30px;
+    color:var(--blue);
     cursor:pointer;
-    color:#0879d1;
+}
+
+/* EMERGENCY BAR */
+
+.notice{
+    background:var(--sky);
+    border-bottom:1px solid var(--border);
+    text-align:center;
+    padding:11px;
+    color:var(--dark-blue);
+    font-weight:bold;
+}
+
+.notice a{
+    color:var(--green);
 }
 
 /* HERO */
 
 .hero{
-    background:
-    linear-gradient(rgba(3,48,82,.82),rgba(3,48,82,.82)),
-    radial-gradient(circle at top,#39bfff,#063d68);
     color:#fff;
-    padding:90px 20px;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(3,48,82,.94),
+        rgba(3,48,82,.76),
+        rgba(3,48,82,.50)
+    ),
+    url("https://images.unsplash.com/photo-1631545806609-8b7d0f6d9d8d?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
 }
 
-.hero-inner{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.3fr .7fr;
-    gap:45px;
-    align-items:center;
+.hero-content{
+    max-width:850px;
+    padding:90px 0;
 }
 
 .badge{
     display:inline-block;
-    background:#ffffff;
-    color:#0879d1;
-    padding:8px 15px;
+    background:#fff;
+    color:var(--blue);
+    padding:9px 17px;
     border-radius:30px;
     font-size:13px;
-    font-weight:bold;
-    margin-bottom:18px;
+    font-weight:900;
+    margin-bottom:20px;
+    letter-spacing:.4px;
 }
 
 .hero h1{
-    font-size:48px;
-    line-height:1.1;
-    margin-bottom:18px;
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.04;
+    margin-bottom:22px;
 }
 
 .hero h1 span{
-    color:#5dd3ff;
+    color:#62d5ff;
 }
 
 .hero p{
+    max-width:760px;
     font-size:19px;
-    max-width:700px;
-    color:#e8f8ff;
-    margin-bottom:28px;
+    color:#e9f8ff;
+    margin-bottom:30px;
 }
 
 .buttons{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
+    gap:13px;
 }
 
 .btn{
@@ -173,25 +249,36 @@ nav a:hover{
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:14px 21px;
-    border-radius:9px;
+    padding:14px 22px;
+    border-radius:8px;
     font-weight:bold;
     border:2px solid transparent;
-    transition:.2s;
+    transition:.25s;
+    cursor:pointer;
 }
 
-.btn-primary{
-    background:#13b95c;
+.btn-blue{
+    background:var(--blue);
     color:#fff;
 }
 
-.btn-primary:hover{
-    background:#0c994a;
+.btn-blue:hover{
+    background:#0667b5;
+    transform:translateY(-2px);
 }
 
-.btn-light{
+.btn-green{
+    background:var(--green);
+    color:#fff;
+}
+
+.btn-green:hover{
+    background:#0c9b4c;
+}
+
+.btn-white{
     background:#fff;
-    color:#075b9d;
+    color:var(--dark-blue);
 }
 
 .btn-outline{
@@ -199,56 +286,70 @@ nav a:hover{
     color:#fff;
 }
 
-.hero-card{
+.btn-outline:hover{
     background:#fff;
-    color:#182b38;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    color:var(--dark-blue);
 }
 
-.hero-card h3{
-    color:#075b9d;
-    margin-bottom:15px;
-    font-size:23px;
+.hero-phone{
+    margin-top:24px;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.hero-card-item{
-    padding:13px 0;
-    border-bottom:1px solid #e6edf1;
-    font-weight:600;
+.hero-phone span{
+    color:#63d7ff;
 }
 
-.hero-card-item:last-child{
-    border-bottom:0;
+/* TRUST STRIP */
+
+.trust{
+    background:#fff;
+    padding:20px 0;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
 
-/* GENERAL */
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.trust-item{
+    font-weight:bold;
+    color:var(--dark-blue);
+}
+
+/* SECTION */
 
 section{
-    padding:75px 20px;
+    padding:80px 0;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
+.section-heading{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:48px;
 }
 
-.section-title h2{
-    font-size:36px;
-    color:#075b9d;
-    margin-bottom:10px;
+.section-heading small{
+    color:var(--blue);
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.section-title p{
-    color:#60717d;
-    max-width:700px;
+.section-heading h2{
+    color:var(--dark-blue);
+    font-size:40px;
+    line-height:1.15;
+    margin:8px 0 12px;
+}
+
+.section-heading p{
+    max-width:730px;
     margin:auto;
+    color:var(--muted);
 }
 
 /* SERVICES */
@@ -260,48 +361,194 @@ section{
 .service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:24px;
 }
 
 .service-card{
-    background:#f6fbfe;
-    border:1px solid #dcecf5;
-    padding:28px;
-    border-radius:16px;
-    transition:.2s;
+    background:#f8fcff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
 }
 
 .service-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transform:translateY(-7px);
+    box-shadow:0 14px 35px rgba(0,0,0,.10);
 }
 
-.icon{
-    width:54px;
-    height:54px;
+.service-image{
+    height:210px;
+    overflow:hidden;
+}
+
+.service-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.service-card:hover .service-image img{
+    transform:scale(1.06);
+}
+
+.service-content{
+    padding:24px;
+}
+
+.service-icon{
+    width:55px;
+    height:55px;
+    margin-top:-50px;
+    margin-bottom:15px;
+    position:relative;
     border-radius:14px;
-    background:#dff3ff;
+    background:var(--blue);
+    color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:27px;
-    margin-bottom:16px;
 }
 
-.service-card h3{
-    color:#075b9d;
+.service-content h3{
+    color:var(--dark-blue);
+    font-size:21px;
     margin-bottom:9px;
 }
 
-.service-card p{
-    color:#5c6c76;
+.service-content p{
+    color:var(--muted);
     font-size:14px;
 }
 
-/* WHY US */
+.service-link{
+    display:inline-block;
+    margin-top:14px;
+    color:var(--blue);
+    font-weight:bold;
+}
+
+/* FEATURE */
+
+.feature{
+    background:var(--sky);
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.feature-image{
+    height:470px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.14);
+}
+
+.feature-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.feature-text small{
+    color:var(--blue);
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.feature-text h2{
+    color:var(--dark-blue);
+    font-size:42px;
+    line-height:1.1;
+    margin:10px 0 20px;
+}
+
+.feature-text p{
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.check-list{
+    list-style:none;
+    margin:20px 0 25px;
+}
+
+.check-list li{
+    margin:10px 0;
+    font-weight:700;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:var(--green);
+    font-weight:900;
+    margin-right:10px;
+}
+
+/* SERVICES DARK BLUE */
+
+.blue-section{
+    background:var(--deep-blue);
+    color:#fff;
+}
+
+.blue-section .section-heading h2{
+    color:#fff;
+}
+
+.blue-section .section-heading small{
+    color:#65d7ff;
+}
+
+.blue-section .section-heading p{
+    color:#c8e8f7;
+}
+
+.extra-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.extra-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    padding:25px 18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.extra-icon{
+    width:57px;
+    height:57px;
+    margin:0 auto 13px;
+    border-radius:50%;
+    background:#fff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.extra-card h3{
+    margin-bottom:7px;
+}
+
+.extra-card p{
+    color:#c8e8f7;
+    font-size:13px;
+}
+
+/* WHY */
 
 .why{
-    background:#eef8fd;
+    background:#fff;
 }
 
 .why-grid{
@@ -311,21 +558,33 @@ section{
 }
 
 .why-card{
-    background:#fff;
-    padding:25px;
+    padding:28px 22px;
     text-align:center;
-    border-radius:15px;
-    box-shadow:0 5px 18px rgba(0,0,0,.05);
+    background:#f8fcff;
+    border:1px solid var(--border);
+    border-radius:14px;
 }
 
-.why-card strong{
-    display:block;
-    color:#075b9d;
+.why-icon{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.why-card h3{
+    color:var(--dark-blue);
     margin-bottom:8px;
-    font-size:17px;
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* PROCESS */
+
+.process{
+    background:#eef8fd;
+}
 
 .process-grid{
     display:grid;
@@ -333,372 +592,416 @@ section{
     gap:20px;
 }
 
-.process-card{
+.step{
     text-align:center;
-    padding:25px 15px;
 }
 
-.number{
-    width:48px;
-    height:48px;
-    margin:0 auto 15px;
+.step-number{
+    width:65px;
+    height:65px;
+    margin:auto;
     border-radius:50%;
-    background:#0879d1;
+    background:var(--blue);
     color:#fff;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:20px;
-    font-weight:bold;
-}
-
-/* PRICES */
-
-.pricing{
-    background:#fff;
-}
-
-.price-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.price-card{
-    border:1px solid #dce7ed;
-    border-radius:16px;
-    padding:28px;
-    background:#fafdff;
-}
-
-.price-card h3{
-    color:#075b9d;
-}
-
-.price-card .price{
-    font-size:27px;
-    font-weight:800;
-    margin:12px 0;
-}
-
-.price-card p{
-    color:#657580;
-    font-size:14px;
-}
-
-.note{
-    margin-top:25px;
-    text-align:center;
-    color:#687984;
-    font-size:14px;
-}
-
-/* ABOUT */
-
-.about{
-    background:#eef8fd;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
     align-items:center;
+    font-size:23px;
+    font-weight:900;
 }
 
-.about h2{
-    color:#075b9d;
-    font-size:36px;
-    margin-bottom:15px;
+.step h3{
+    color:var(--dark-blue);
+    margin:15px 0 7px;
 }
 
-.check-list{
-    list-style:none;
-    margin-top:20px;
+.step p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.check-list li{
-    margin:12px 0;
-    font-weight:600;
-}
+/* AREAS */
 
-.check-list li::before{
-    content:"✓";
-    color:#0ca957;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-.info-box{
+.areas{
     background:#fff;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
-
-.info-box h3{
-    color:#075b9d;
-    margin-bottom:15px;
-}
-
-.info-row{
-    padding:12px 0;
-    border-bottom:1px solid #e6edf1;
-}
-
-.info-row:last-child{
-    border-bottom:0;
-}
-
-/* SERVICE AREAS */
 
 .area-box{
-    background:#075b9d;
+    background:linear-gradient(135deg,var(--blue),var(--deep-blue));
     color:#fff;
-    padding:40px;
+    padding:50px;
     border-radius:20px;
     text-align:center;
 }
 
 .area-box h2{
-    margin-bottom:12px;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.area-box p{
+    color:#d8f2ff;
 }
 
 .area-list{
-    margin-top:20px;
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
+    flex-wrap:wrap;
     gap:10px;
+    margin-top:25px;
 }
 
 .area{
+    padding:10px 17px;
+    border-radius:30px;
     background:rgba(255,255,255,.12);
     border:1px solid rgba(255,255,255,.25);
-    padding:9px 15px;
-    border-radius:30px;
 }
 
 /* QUOTE */
 
 .quote{
-    background:#fff;
+    background:#f4faff;
+}
+
+.quote-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:45px;
+    align-items:center;
+}
+
+.quote-text h2{
+    color:var(--dark-blue);
+    font-size:42px;
+    line-height:1.1;
+    margin:10px 0 18px;
+}
+
+.quote-text p{
+    color:var(--muted);
+}
+
+.contact-list{
+    margin-top:25px;
+}
+
+.contact-list a{
+    display:block;
+    color:var(--dark-blue);
+    font-size:20px;
+    font-weight:bold;
+    margin:12px 0;
 }
 
 .quote-form{
-    max-width:800px;
-    margin:auto;
-    background:#f4faff;
-    padding:30px;
-    border-radius:18px;
-    border:1px solid #dcecf5;
+    background:#fff;
+    padding:32px;
+    border-radius:17px;
+    border:1px solid var(--border);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.quote-form h3{
+    color:var(--dark-blue);
+    font-size:25px;
+    margin-bottom:20px;
 }
 
 .form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:16px;
+    gap:14px;
 }
 
-input,select,textarea{
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-size:13px;
+    font-weight:bold;
+    color:#334b5c;
+}
+
+input,
+select,
+textarea{
     width:100%;
-    padding:14px;
-    border:1px solid #cbdbe4;
-    border-radius:8px;
+    padding:13px;
+    border:1px solid #cbdde8;
+    border-radius:7px;
     font:inherit;
     background:#fff;
 }
 
 textarea{
-    min-height:130px;
+    min-height:125px;
     resize:vertical;
-}
-
-.full{
-    grid-column:1/-1;
 }
 
 .submit{
     width:100%;
     border:0;
-    cursor:pointer;
     font-size:16px;
-    background:#13b95c;
-    color:#fff;
 }
 
 /* CTA */
 
 .cta{
-    background:linear-gradient(135deg,#0879d1,#034b82);
+    background:linear-gradient(135deg,var(--blue),var(--deep-blue));
     color:#fff;
     text-align:center;
 }
 
 .cta h2{
-    font-size:38px;
-    margin-bottom:12px;
+    font-size:42px;
+    margin-bottom:10px;
 }
 
 .cta p{
+    color:#e0f6ff;
     margin-bottom:25px;
+}
+
+/* FAQ */
+
+.faq{
+    background:#fff;
+}
+
+.faq-list{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    background:#f8fcff;
+    border:1px solid var(--border);
+    border-radius:8px;
+    margin-bottom:12px;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    padding:19px;
+    font-weight:bold;
+    color:var(--dark-blue);
+    list-style:none;
+}
+
+summary::after{
+    content:"+";
+    float:right;
+    color:var(--blue);
+    font-size:20px;
+}
+
+details[open] summary::after{
+    content:"−";
+}
+
+details p{
+    padding:0 19px 19px;
+    color:var(--muted);
 }
 
 /* FOOTER */
 
 footer{
-    background:#071d2c;
-    color:#c8d8e2;
-    padding:45px 20px 25px;
+    background:#06243c;
+    color:#c9dce7;
+    padding:60px 0 25px;
 }
 
 .footer-grid{
-    max-width:1200px;
-    margin:auto;
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
-    gap:35px;
+    gap:40px;
 }
 
 footer h3{
     color:#fff;
-    margin-bottom:12px;
+    margin-bottom:14px;
 }
 
-footer a{
-    display:block;
-    margin:7px 0;
-    color:#c8d8e2;
+footer p{
+    color:#aac3d1;
+    font-size:14px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:8px 0;
+}
+
+footer a:hover{
+    color:#64d6ff;
+}
+
+.footer-phone{
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
 }
 
 .footer-bottom{
-    max-width:1200px;
-    margin:30px auto 0;
+    border-top:1px solid #24465d;
+    margin-top:40px;
     padding-top:20px;
-    border-top:1px solid #294052;
     text-align:center;
+    color:#8eabbc;
     font-size:13px;
 }
 
-/* FLOATING WHATSAPP */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
     right:18px;
     bottom:18px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
+    width:62px;
+    height:62px;
     background:#25D366;
     color:#fff;
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:31px;
-    z-index:2000;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:3000;
+    box-shadow:0 5px 25px rgba(0,0,0,.25);
 }
 
 .whatsapp:hover{
     transform:scale(1.08);
 }
 
-/* EMERGENCY BAR */
-
-.emergency{
-    background:#eaf8ff;
-    padding:12px 20px;
-    text-align:center;
-    font-weight:bold;
-    color:#075b9d;
-}
-
-.emergency a{
-    color:#0b9d4c;
-}
-
 /* MOBILE */
 
-@media(max-width:900px){
-
-    .hero-inner,
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .why-grid,
-    .process-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .price-grid{
-        grid-template-columns:1fr;
-    }
+@media(max-width:950px){
 
     nav{
         display:none;
         position:absolute;
-        top:76px;
+        top:78px;
         left:0;
-        width:100%;
+        right:0;
         background:#fff;
-        padding:20px;
+        padding:22px;
         flex-direction:column;
-        box-shadow:0 8px 20px rgba(0,0,0,.1);
+        box-shadow:0 10px 25px rgba(0,0,0,.12);
     }
 
     nav.active{
         display:flex;
     }
 
-    .menu-btn{
+    .menu{
         display:block;
     }
+
+    .nav-call{
+        display:block;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .extra-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature-grid,
+    .quote-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
 }
 
 @media(max-width:600px){
 
+    .topbar-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+
     .hero{
-        padding:65px 18px;
+        min-height:620px;
     }
 
     .hero h1{
-        font-size:37px;
+        font-size:42px;
     }
 
     .hero p{
-        font-size:17px;
+        font-size:16px;
     }
 
     section{
-        padding:55px 17px;
+        padding:60px 0;
     }
 
-    .section-title h2,
-    .about h2{
-        font-size:29px;
+    .section-heading h2{
+        font-size:32px;
     }
 
+    .trust-grid,
     .service-grid,
+    .extra-grid,
     .why-grid,
-    .process-grid{
+    .process-grid,
+    .footer-grid{
         grid-template-columns:1fr;
+    }
+
+    .feature-image{
+        height:330px;
+    }
+
+    .feature-text h2,
+    .quote-text h2{
+        font-size:34px;
+    }
+
+    .area-box{
+        padding:35px 20px;
+    }
+
+    .area-box h2{
+        font-size:29px;
     }
 
     .form-grid{
         grid-template-columns:1fr;
     }
 
-    .full{
+    .form-group.full{
         grid-column:auto;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
     }
 
     .buttons .btn{
@@ -708,46 +1011,85 @@ footer a{
     .hero-card{
         padding:22px;
     }
+
+    .logo-text{
+        font-size:15px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="navbar">
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>❄️ Aircon Installation • Repair • Servicing • Maintenance</span>
 
-<a href="#" class="logo">
+        <a href="tel:0688685355">
+            📞 068 868 5355
+        </a>
+    </div>
+</div>
+
+
+<!-- HEADER -->
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+
     <div class="logo-icon">❄</div>
+
     <div class="logo-text">
         Lee Aircon
         <span>Installation & Repair</span>
     </div>
+
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="menu" onclick="toggleMenu()">☰</div>
 
 <nav id="nav">
+
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#areas">Areas</a>
     <a href="#quote">Get Quote</a>
-    <a href="tel:0688685355">📞 Call</a>
+
+    <a href="tel:0688685355" class="nav-call">
+        📞 068 868 5355
+    </a>
+
 </nav>
 
 </div>
 </header>
 
-<div class="emergency">
-    ❄️ Aircon problems? <a href="tel:0688685355">Call 068 868 5355</a> for assistance.
+
+<!-- NOTICE -->
+<div class="notice">
+    Need aircon assistance?
+    <a href="tel:0688685355">Call 068 868 5355</a>
+    or
+    <a href="https://wa.me/27688685355" target="_blank">WhatsApp Lee</a>
 </div>
 
-<section class="hero">
 
-<div class="hero-inner">
+<!-- HERO -->
+<section class="hero" id="home">
 
-<div>
-<span class="badge">PROFESSIONAL AIRCON SERVICES • GAUTENG</span>
+<div class="container">
+
+<div class="hero-content">
+
+<span class="badge">
+    PROFESSIONAL AIRCON SERVICES • GAUTENG
+</span>
 
 <h1>
     Aircon Installation,
@@ -755,129 +1097,244 @@ footer a{
 </h1>
 
 <p>
-    Reliable air conditioning installation, repairs, servicing and maintenance
-    for homes, offices, shops and businesses across Gauteng.
+    Professional air conditioning installation, repair,
+    servicing, cleaning and maintenance for homes, offices,
+    shops and businesses across Gauteng.
 </p>
 
 <div class="buttons">
-    <a class="btn btn-primary"
-       href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon%20Installation%20%26%20Repair,%20I%20need%20an%20aircon%20service.">
-       💬 WhatsApp Us
-    </a>
 
-    <a class="btn btn-light" href="tel:0688685355">
-       📞 Call 068 868 5355
-    </a>
+<a
+href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon%20Installation%20%26%20Repair.%20I%20need%20an%20aircon%20service."
+target="_blank"
+class="btn btn-green">
+
+💬 WhatsApp Us
+
+</a>
+
+<a
+href="tel:0688685355"
+class="btn btn-white">
+
+📞 Call 068 868 5355
+
+</a>
+
 </div>
+
+<div class="hero-phone">
+    Direct Contact:
+    <span>068 868 5355</span>
 </div>
 
-<div class="hero-card">
-    <h3>What We Do</h3>
-
-    <div class="hero-card-item">❄️ Aircon Installation</div>
-    <div class="hero-card-item">🔧 Aircon Repairs</div>
-    <div class="hero-card-item">🧼 Aircon Cleaning & Servicing</div>
-    <div class="hero-card-item">⚡ Electrical Fault Diagnosis</div>
-    <div class="hero-card-item">🏢 Residential & Commercial</div>
 </div>
 
 </div>
 </section>
 
 
-<section id="services" class="services">
+<!-- TRUST -->
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item">❄️ Aircon Installation</div>
+<div class="trust-item">🔧 Aircon Repair</div>
+<div class="trust-item">🧼 Aircon Servicing</div>
+<div class="trust-item">🏢 Residential & Commercial</div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
+
+<small>What We Do</small>
+
 <h2>Our Aircon Services</h2>
+
 <p>
-From new installations to repairs and routine maintenance,
-we help keep your indoor space comfortable throughout the year.
+From new aircon installations to repairs, cleaning and
+maintenance, contact Lee for your air conditioning requirements.
 </p>
+
 </div>
+
 
 <div class="service-grid">
 
+
+<!-- 1 -->
 <div class="service-card">
-<div class="icon">❄️</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1631545806609-8b7d0f6d9d8d?auto=format&fit=crop&w=1000&q=85"
+alt="Aircon installation service">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">❄️</div>
+
 <h3>Aircon Installation</h3>
+
 <p>
-Professional installation of split air conditioning systems for
-homes, offices, shops and other properties.
+Installation of split air conditioning systems for homes,
+offices, shops and other properties.
 </p>
+
+<a href="#quote" class="service-link">
+Request Installation →
+</a>
+
+</div>
 </div>
 
+
+<!-- 2 -->
 <div class="service-card">
-<div class="icon">🔧</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85"
+alt="Aircon technician repair">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">🔧</div>
+
 <h3>Aircon Repairs</h3>
+
 <p>
-Troubleshooting and repair for air conditioners that are not
-cooling, leaking, making unusual sounds or not switching on.
+Assistance with aircon systems that are not cooling,
+leaking, making unusual sounds or failing to operate.
 </p>
+
+<a href="#quote" class="service-link">
+Request Repair →
+</a>
+
+</div>
 </div>
 
+
+<!-- 3 -->
 <div class="service-card">
-<div class="icon">🧼</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85"
+alt="Aircon maintenance technician">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">🧼</div>
+
 <h3>Aircon Servicing</h3>
+
 <p>
-Cleaning and servicing designed to improve performance,
-airflow and general system condition.
+Cleaning, inspection and maintenance to help keep your
+air conditioning system operating properly.
 </p>
+
+<a href="#quote" class="service-link">
+Book Servicing →
+</a>
+
+</div>
 </div>
 
+
+<!-- 4 -->
 <div class="service-card">
-<div class="icon">💧</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85"
+alt="Aircon water leakage">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">💧</div>
+
 <h3>Water Leakage</h3>
+
 <p>
-Inspection and repair of common aircon drainage and water
-leakage problems.
+Inspection of common aircon drainage and water leakage
+problems.
 </p>
+
+<a href="#quote" class="service-link">
+Request Assistance →
+</a>
+
+</div>
 </div>
 
+
+<!-- 5 -->
 <div class="service-card">
-<div class="icon">⚡</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85"
+alt="Electrical technician">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">⚡</div>
+
 <h3>Electrical Faults</h3>
+
 <p>
-Inspection of common electrical and control problems affecting
+Troubleshooting of electrical and control issues affecting
 air conditioning systems.
 </p>
+
+<a href="#quote" class="service-link">
+Request Assistance →
+</a>
+
+</div>
 </div>
 
+
+<!-- 6 -->
 <div class="service-card">
-<div class="icon">🏢</div>
+
+<div class="service-image">
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+alt="Commercial office air conditioning">
+</div>
+
+<div class="service-content">
+
+<div class="service-icon">🏢</div>
+
 <h3>Commercial Aircon</h3>
-<p>
-Aircon installation, servicing and maintenance for offices,
-shops, businesses and commercial properties.
-</p>
-</div>
 
-<div class="service-card">
-<div class="icon">🌡️</div>
-<h3>Cooling Problems</h3>
 <p>
-We investigate poor cooling, weak airflow and systems that
-struggle to maintain the desired temperature.
+Aircon services for offices, shops, businesses and other
+commercial properties.
 </p>
-</div>
 
-<div class="service-card">
-<div class="icon">🔄</div>
-<h3>Maintenance</h3>
-<p>
-Routine maintenance helps identify potential problems before
-they become expensive repairs.
-</p>
-</div>
+<a href="#quote" class="service-link">
+Request Commercial Service →
+</a>
 
-<div class="service-card">
-<div class="icon">🏠</div>
-<h3>Residential Aircon</h3>
-<p>
-Aircon solutions for bedrooms, lounges, homes, apartments
-and other residential properties.
-</p>
+</div>
 </div>
 
 </div>
@@ -885,35 +1342,262 @@ and other residential properties.
 </section>
 
 
+<!-- FEATURE -->
+<section class="feature">
+
+<div class="container feature-grid">
+
+<div class="feature-image">
+
+<img
+src="https://images.unsplash.com/photo-1631545806609-8b7d0f6d9d8d?auto=format&fit=crop&w=1200&q=85"
+alt="Professional aircon installation">
+
+</div>
+
+
+<div class="feature-text">
+
+<small>Air Conditioning Solutions</small>
+
+<h2>
+Keep Your Home or Business Comfortable
+</h2>
+
+<p>
+A properly maintained air conditioning system can help
+provide comfortable indoor temperatures and better airflow.
+</p>
+
+<p>
+Lee Aircon Installation & Repair can assist with installation,
+repairs, servicing and maintenance requirements.
+</p>
+
+<ul class="check-list">
+
+<li>New aircon installations</li>
+<li>Aircon repairs</li>
+<li>Aircon cleaning</li>
+<li>Routine servicing</li>
+<li>Water leakage problems</li>
+<li>Cooling problems</li>
+<li>Residential systems</li>
+<li>Commercial systems</li>
+
+</ul>
+
+<a href="#quote" class="btn btn-blue">
+REQUEST A QUOTE
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- EXTRA SERVICES -->
+<section class="blue-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Complete Aircon Care</small>
+
+<h2>More Aircon Services</h2>
+
+<p>
+Tell us what is happening with your air conditioner and
+we can discuss the appropriate service.
+</p>
+
+</div>
+
+
+<div class="extra-grid">
+
+
+<div class="extra-card">
+
+<div class="extra-icon">🌡️</div>
+
+<h3>Cooling Problems</h3>
+
+<p>
+Assistance with poor or insufficient cooling.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">💨</div>
+
+<h3>Airflow Problems</h3>
+
+<p>
+Inspection of weak or restricted airflow.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">🔄</div>
+
+<h3>Maintenance</h3>
+
+<p>
+Routine system checks and maintenance.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">🏠</div>
+
+<h3>Residential</h3>
+
+<p>
+Aircon services for homes and apartments.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">🏢</div>
+
+<h3>Commercial</h3>
+
+<p>
+Services for offices, shops and businesses.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">🧹</div>
+
+<h3>Cleaning</h3>
+
+<p>
+Aircon cleaning and general servicing.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">💧</div>
+
+<h3>Leak Problems</h3>
+
+<p>
+Assistance with aircon water leakage.
+</p>
+
+</div>
+
+
+<div class="extra-card">
+
+<div class="extra-icon">⚙️</div>
+
+<h3>Fault Diagnosis</h3>
+
+<p>
+Troubleshooting aircon system problems.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- WHY -->
 <section class="why">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
+
+<small>Why Lee</small>
+
 <h2>Why Choose Lee Aircon?</h2>
-<p>Professional service with a focus on reliable workmanship and customer satisfaction.</p>
+
+<p>
+A convenient contact for aircon installation, repair and
+maintenance requirements.
+</p>
+
 </div>
+
 
 <div class="why-grid">
 
-<div class="why-card">
-<strong>✔ Professional Service</strong>
-<p>We aim to provide neat and dependable aircon services.</p>
-</div>
 
 <div class="why-card">
-<strong>✔ Fast Response</strong>
-<p>Contact us when you need assistance with your aircon system.</p>
+
+<div class="why-icon">📞</div>
+
+<h3>Easy Contact</h3>
+
+<p>
+Call or WhatsApp directly on 068 868 5355.
+</p>
+
 </div>
 
-<div class="why-card">
-<strong>✔ Clear Quotes</strong>
-<p>Tell us what you need and request a quote before work begins.</p>
-</div>
 
 <div class="why-card">
-<strong>✔ Homes & Businesses</strong>
-<p>We service residential and commercial properties.</p>
+
+<div class="why-icon">❄️</div>
+
+<h3>Aircon Focused</h3>
+
+<p>
+Our services are focused specifically on air conditioning.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">🏠</div>
+
+<h3>Homes & Businesses</h3>
+
+<p>
+We accept residential and commercial service enquiries.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">💬</div>
+
+<h3>WhatsApp Quotes</h3>
+
+<p>
+Send your requirements and discuss your job easily.
+</p>
+
 </div>
 
 </div>
@@ -921,39 +1605,76 @@ and other residential properties.
 </section>
 
 
-<section>
+<!-- PROCESS -->
+<section class="process">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
+
+<small>Simple Process</small>
+
 <h2>How It Works</h2>
-<p>Getting your aircon serviced or repaired is simple.</p>
+
+<p>
+Getting aircon assistance is simple.
+</p>
+
 </div>
+
 
 <div class="process-grid">
 
-<div class="process-card">
-<div class="number">1</div>
+
+<div class="step">
+
+<div class="step-number">1</div>
+
 <h3>Contact Us</h3>
-<p>Call or WhatsApp 068 868 5355.</p>
+
+<p>
+Call or WhatsApp 068 868 5355.
+</p>
+
 </div>
 
-<div class="process-card">
-<div class="number">2</div>
-<h3>Describe the Problem</h3>
-<p>Tell us what is happening with your aircon.</p>
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>Describe Your Need</h3>
+
+<p>
+Tell us whether you need installation, repair or servicing.
+</p>
+
 </div>
 
-<div class="process-card">
-<div class="number">3</div>
-<h3>Get a Quote</h3>
-<p>We discuss the required work and pricing.</p>
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Discuss the Job</h3>
+
+<p>
+Provide your location and information about the aircon.
+</p>
+
 </div>
 
-<div class="process-card">
-<div class="number">4</div>
-<h3>Service</h3>
-<p>We arrange the service or installation.</p>
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>Arrange Service</h3>
+
+<p>
+Arrange the work according to the agreed requirements.
+</p>
+
 </div>
 
 </div>
@@ -961,54 +1682,52 @@ and other residential properties.
 </section>
 
 
-<section id="about" class="about">
+<!-- ABOUT -->
+<section class="feature" id="about">
 
-<div class="container about-grid">
+<div class="container feature-grid">
 
-<div>
+<div class="feature-text">
 
-<h2>Professional Aircon Solutions</h2>
+<small>About Lee</small>
+
+<h2>
+Lee Aircon Installation & Repair
+</h2>
 
 <p>
 Lee Aircon Installation & Repair provides air conditioning
-services for customers looking for installation, repairs,
-servicing and maintenance.
+services for residential and commercial customers across Gauteng.
+</p>
+
+<p>
+Our services cover new installations, repairs, servicing,
+cleaning, maintenance and troubleshooting.
 </p>
 
 <ul class="check-list">
-<li>Aircon installation</li>
-<li>Aircon repairs</li>
-<li>Cleaning and servicing</li>
-<li>Residential air conditioning</li>
-<li>Commercial air conditioning</li>
-<li>Maintenance and fault diagnosis</li>
+
+<li>Residential aircon services</li>
+<li>Commercial aircon services</li>
+<li>Installation</li>
+<li>Repair</li>
+<li>Servicing</li>
+<li>Maintenance</li>
+
 </ul>
 
+<a href="tel:0688685355" class="btn btn-blue">
+📞 CALL 068 868 5355
+</a>
+
 </div>
 
-<div class="info-box">
 
-<h3>Contact Lee Aircon</h3>
+<div class="feature-image">
 
-<div class="info-row">
-<strong>📞 Phone:</strong><br>
-<a href="tel:0688685355">068 868 5355</a>
-</div>
-
-<div class="info-row">
-<strong>💬 WhatsApp:</strong><br>
-<a href="https://wa.me/27688685355">Chat with us on WhatsApp</a>
-</div>
-
-<div class="info-row">
-<strong>📍 Service Area:</strong><br>
-Gauteng
-</div>
-
-<div class="info-row">
-<strong>🏠 Services:</strong><br>
-Residential & Commercial
-</div>
+<img
+src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=85"
+alt="Professional maintenance service">
 
 </div>
 
@@ -1016,19 +1735,23 @@ Residential & Commercial
 </section>
 
 
-<section id="areas">
+<!-- AREAS -->
+<section class="areas" id="areas">
 
 <div class="container">
 
 <div class="area-box">
 
-<h2>Aircon Services Across Gauteng</h2>
+<h2>
+Aircon Services Across Gauteng
+</h2>
 
 <p>
 Contact us to confirm availability in your area.
 </p>
 
 <div class="area-list">
+
 <span class="area">Pretoria</span>
 <span class="area">Centurion</span>
 <span class="area">Midrand</span>
@@ -1036,159 +1759,316 @@ Contact us to confirm availability in your area.
 <span class="area">Tembisa</span>
 <span class="area">Kempton Park</span>
 <span class="area">Ekurhuleni</span>
-<span class="area">Gauteng</span>
-</div>
+<span class="area">Pretoria East</span>
+<span class="area">Pretoria North</span>
+<span class="area">Pretoria West</span>
+<span class="area">Soshanguve</span>
+<span class="area">Surrounding Gauteng</span>
 
 </div>
 
 </div>
-</section>
-
-
-<section class="pricing">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Aircon Service Pricing</h2>
-<p>
-Final pricing depends on the aircon type, problem, installation
-requirements and location. Request a quote for your specific job.
-</p>
-</div>
-
-<div class="price-grid">
-
-<div class="price-card">
-<h3>Aircon Service</h3>
-<div class="price">Quote</div>
-<p>
-Cleaning, inspection and general servicing based on the condition
-of the unit.
-</p>
-</div>
-
-<div class="price-card">
-<h3>Aircon Repair</h3>
-<div class="price">Quote</div>
-<p>
-Repair pricing depends on the fault, parts required and system type.
-</p>
-</div>
-
-<div class="price-card">
-<h3>New Installation</h3>
-<div class="price">Quote</div>
-<p>
-Installation pricing depends on unit size, installation location,
-pipe length and other requirements.
-</p>
-</div>
-
-</div>
-
-<p class="note">
-* Prices are subject to inspection and the requirements of each job.
-</p>
 
 </div>
 </section>
 
 
-<section id="quote" class="quote">
+<!-- QUOTE -->
+<section class="quote" id="quote">
 
-<div class="container">
+<div class="container quote-grid">
 
-<div class="section-title">
-<h2>Request an Aircon Quote</h2>
-<p>Send your details and we will contact you.</p>
+
+<div class="quote-text">
+
+<small style="color:#0879d1;font-weight:900;">
+REQUEST SERVICE
+</small>
+
+<h2>
+Need Aircon Installation or Repair?
+</h2>
+
+<p>
+Send your details and aircon requirements. The form will
+open WhatsApp so you can send the request directly to Lee.
+</p>
+
+
+<div class="contact-list">
+
+<a href="tel:0688685355">
+📞 068 868 5355
+</a>
+
+<a
+href="https://wa.me/27688685355"
+target="_blank">
+
+💬 WhatsApp 068 868 5355
+
+</a>
+
 </div>
 
-<form class="quote-form"
-      onsubmit="sendQuote(event)">
+</div>
+
+
+<form class="quote-form" onsubmit="sendQuote(event)">
+
+<h3>Request a Quote</h3>
 
 <div class="form-grid">
 
-<div>
+
+<div class="form-group">
+
 <label>Your Name</label>
-<input id="name" type="text" placeholder="Your name" required>
+
+<input
+id="name"
+type="text"
+placeholder="Your name"
+required>
+
 </div>
 
-<div>
+
+<div class="form-group">
+
 <label>Phone Number</label>
-<input id="phone" type="tel" placeholder="068 868 5355" required>
+
+<input
+id="phone"
+type="tel"
+placeholder="068 868 5355"
+required>
+
 </div>
 
-<div>
+
+<div class="form-group">
+
 <label>Service Required</label>
+
 <select id="service" required>
-<option value="">Select service</option>
+
+<option value="">
+Select service
+</option>
+
 <option>Aircon Installation</option>
 <option>Aircon Repair</option>
 <option>Aircon Servicing</option>
 <option>Aircon Cleaning</option>
 <option>Aircon Maintenance</option>
+<option>Water Leakage</option>
+<option>Cooling Problem</option>
+<option>Electrical Fault</option>
 <option>Commercial Aircon</option>
 <option>Other</option>
+
 </select>
+
 </div>
 
-<div>
+
+<div class="form-group">
+
 <label>Property Type</label>
+
 <select id="property">
+
 <option>House</option>
 <option>Apartment</option>
 <option>Office</option>
 <option>Shop</option>
 <option>Business</option>
 <option>Other</option>
+
 </select>
+
 </div>
 
-<div class="full">
-<label>Your Area</label>
-<input id="area" type="text" placeholder="Example: Centurion">
+
+<div class="form-group full">
+
+<label>Area / Suburb</label>
+
+<input
+id="area"
+type="text"
+placeholder="Example: Centurion"
+required>
+
 </div>
 
-<div class="full">
-<label>Tell Us What You Need</label>
-<textarea id="message" placeholder="Describe the aircon problem or installation you need..."></textarea>
+
+<div class="form-group full">
+
+<label>Describe What You Need</label>
+
+<textarea
+id="message"
+placeholder="Tell us about the aircon problem or installation you need..."
+required></textarea>
+
 </div>
 
-<div class="full">
-<button class="btn submit" type="submit">
-💬 Send Quote Request on WhatsApp
+
+<div class="form-group full">
+
+<button type="submit" class="btn btn-green submit">
+
+💬 SEND REQUEST ON WHATSAPP
+
 </button>
+
 </div>
 
 </div>
+
 </form>
 
 </div>
 </section>
 
 
+<!-- FAQ -->
+<section class="faq">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>Questions</small>
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+
+<div class="faq-list">
+
+
+<details>
+
+<summary>
+Do you install new air conditioners?
+</summary>
+
+<p>
+Yes. Contact us with the type of property, location and
+installation requirements so the job can be discussed.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do you repair air conditioners?
+</summary>
+
+<p>
+Yes. Contact us with details of the problem, such as poor
+cooling, water leakage, unusual sounds or the unit not switching on.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do you service and clean aircons?
+</summary>
+
+<p>
+Yes. Aircon cleaning, servicing and maintenance are available.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do you work with businesses?
+</summary>
+
+<p>
+Yes. Commercial aircon service enquiries from offices,
+shops and businesses are welcome.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can I send pictures of my aircon on WhatsApp?
+</summary>
+
+<p>
+Yes. Sending photographs can help explain the aircon,
+installation location or visible problem.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What is the Lee Aircon contact number?
+</summary>
+
+<p>
+Call or WhatsApp <strong>068 868 5355</strong>.
+</p>
+
+</details>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
 <section class="cta">
 
 <div class="container">
 
-<h2>Need Aircon Help?</h2>
+<h2>
+Need Aircon Help?
+</h2>
 
 <p>
-Don't let a faulty air conditioner leave you uncomfortable.
 Contact Lee Aircon Installation & Repair today.
 </p>
 
 <div class="buttons" style="justify-content:center;">
 
-<a class="btn btn-primary"
-href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon,%20I%20would%20like%20to%20request%20an%20aircon%20service.">
+<a
+href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon%20Installation%20%26%20Repair.%20I%20need%20help%20with%20my%20aircon."
+target="_blank"
+class="btn btn-green">
+
 💬 WhatsApp 068 868 5355
+
 </a>
 
-<a class="btn btn-light"
-href="tel:0688685355">
+
+<a
+href="tel:0688685355"
+class="btn btn-white">
+
 📞 Call Now
+
 </a>
 
 </div>
@@ -1197,53 +2077,136 @@ href="tel:0688685355">
 </section>
 
 
+<!-- FOOTER -->
 <footer>
+
+<div class="container">
 
 <div class="footer-grid">
 
+
 <div>
-<h3>Lee Aircon Installation & Repair</h3>
+
+<h3>
+Lee Aircon Installation & Repair
+</h3>
+
 <p>
-Professional air conditioning installation, repair, servicing
-and maintenance for residential and commercial customers across Gauteng.
+Professional aircon installation, repair, servicing,
+cleaning and maintenance for homes, offices, shops and
+businesses across Gauteng.
 </p>
+
+<div class="footer-phone">
+📞 068 868 5355
 </div>
 
-<div>
-<h3>Quick Links</h3>
-<a href="#services">Services</a>
-<a href="#about">About Us</a>
-<a href="#areas">Service Areas</a>
-<a href="#quote">Request a Quote</a>
 </div>
 
+
 <div>
+
+<h3>Services</h3>
+
+<ul>
+
+<li><a href="#services">Aircon Installation</a></li>
+<li><a href="#services">Aircon Repair</a></li>
+<li><a href="#services">Aircon Servicing</a></li>
+<li><a href="#services">Aircon Cleaning</a></li>
+<li><a href="#services">Maintenance</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
 <h3>Contact</h3>
-<a href="tel:0688685355">📞 068 868 5355</a>
-<a href="https://wa.me/27688685355">💬 WhatsApp</a>
-</div>
+
+<ul>
+
+<li>
+<a href="tel:0688685355">
+📞 068 868 5355
+</a>
+</li>
+
+<li>
+<a href="https://wa.me/27688685355" target="_blank">
+💬 WhatsApp
+</a>
+</li>
+
+<li>
+Gauteng, South Africa
+</li>
+
+</ul>
 
 </div>
+
+
+</div>
+
 
 <div class="footer-bottom">
-© 2026 Lee Aircon Installation & Repair. All Rights Reserved.
+
+© 2026 Lee Aircon Installation & Repair.
+All Rights Reserved.
+
+<br>
+
+068 868 5355
+
+</div>
+
 </div>
 
 </footer>
 
 
-<a class="whatsapp"
-href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon,%20I%20need%20help%20with%20my%20aircon."
-aria-label="Chat on WhatsApp">
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/27688685355?text=Hello%20Lee%20Aircon%20Installation%20%26%20Repair.%20I%20need%20an%20aircon%20service."
+target="_blank"
+aria-label="Chat with Lee Aircon on WhatsApp">
+
 💬
+
 </a>
 
 
 <script>
 
 function toggleMenu(){
-    document.getElementById("nav").classList.toggle("active");
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("active");
+
 }
+
+
+document
+.querySelectorAll("#nav a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("nav")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
 
 function sendQuote(event){
 
@@ -1267,6 +2230,7 @@ function sendQuote(event){
     const message =
         document.getElementById("message").value;
 
+
     const text =
 `Hello Lee Aircon Installation & Repair.
 
@@ -1281,20 +2245,15 @@ Area: ${area}
 Details:
 ${message}`;
 
+
     const url =
         "https://wa.me/27688685355?text=" +
         encodeURIComponent(text);
 
+
     window.open(url,"_blank");
+
 }
-
-document.querySelectorAll("nav a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-        document.getElementById("nav").classList.remove("active");
-    });
-
-});
 
 </script>
 
